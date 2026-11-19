@@ -6,17 +6,6 @@ Universidad del Pacífico · Ingeniería de Sistemas · Seminario de Actualizaci
 
 ---
 
-## Datos de la entrega
-
-| | |
-|---|---|
-| **Equipo** | _[Nombre del equipo]_ |
-| **Repositorio** | _[https://github.com/ORGANIZACION/REPOSITORIO]_ |
-| **Release semana-1** | _[https://github.com/ORGANIZACION/REPOSITORIO/releases/tag/semana-1]_ |
-| **Evidencia** | [docs/evidencia](docs/evidencia) · ver también [Evidencia de funcionamiento](#evidencia-de-funcionamiento) |
-| **Frontend público** | _(opcional en la entrega 1)_ |
-| **Backend público** | _(opcional en la entrega 1)_ |
-
 ## Integrantes
 
 | Integrante | Usuario GitHub |
