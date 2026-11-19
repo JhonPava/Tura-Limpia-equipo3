@@ -1,0 +1,17 @@
+# PostgreSQL local para desarrollo (opcional si ya tienes PostgreSQL instalado).
+# Uso: docker compose up -d
+services:
+  postgres:
+    image: postgres:16
+    container_name: tura-limpia-db
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: tura_limpia
+    ports:
+      - "5432:5432"
+    volumes:
+      - tura_limpia_datos:/var/lib/postgresql/data
+
+volumes:
+  tura_limpia_datos:

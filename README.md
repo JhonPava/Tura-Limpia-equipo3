@@ -17,17 +17,24 @@ Universidad del Pacífico · Ingeniería de Sistemas · Seminario de Actualizaci
 | **Frontend público** | _(opcional en la entrega 1)_ |
 | **Backend público** | _(opcional en la entrega 1)_ |
 
-## Integrantes y responsabilidades
+## Integrantes
 
-| Integrante | Usuario GitHub | Rol | Responsabilidades en la entrega 1 |
-|---|---|---|---|
-| _[Nombre]_ | _[@usuario]_ | Líder / integración | README, revisión y merge de PRs, release `semana-1`, envío de credenciales por Teams |
-| _[Nombre]_ | _[@usuario]_ | Base de datos | Conexión a PostgreSQL, migraciones, datos de prueba y script del administrador inicial |
-| _[Nombre]_ | _[@usuario]_ | Backend | API de autenticación (login, logout, sesión), validación de permisos y pruebas |
-| _[Nombre]_ | _[@usuario]_ | Frontend | Pantalla de inicio de sesión, manejo de errores y cierre de sesión |
-| _[Nombre]_ | _[@usuario]_ | Frontend / evidencia | Dashboard, rutas protegidas, capturas e instrucciones de verificación |
+| Integrante | Usuario GitHub |
+|---|---|
+| Wilmer Chamapuro Moya | [@chamapuromoyawilmer-lang](https://github.com/chamapuromoyawilmer-lang) |
+| Johnathan Javier Lozano Patiño | [@jonathan35356](https://github.com/jonathan35356) |
+| Juan Sebastián Salazar Aguirre | _[pendiente]_ |
+| Arley Mauricio Camacho Montoya | [@mauro12351](https://github.com/mauro12351) |
+| Karen Julieth Solis Mosquera | [@KarenSolis3004](https://github.com/KarenSolis3004) |
+| Jeison Enrique Solis Valverde | [@JEIBLEIK3](https://github.com/JEIBLEIK3) |
+| Juan Camilo Angulo Naboyan | _[pendiente]_ |
+| Juan Alejandro Roldan Rodríguez | [@jaroldan19](https://github.com/jaroldan19) |
+| Jhon Fernando Pava Gonzalez | [@JhonPava](https://github.com/JhonPava) |
+| Duvan Andres Delgado Vergara | _[por confirmar]_ |
 
 ## Tecnologías
+
+Backend propio e independiente con PostgreSQL. No se usan servicios tipo backend-as-a-service (Supabase, Firebase, Atlas): los endpoints, controladores y migraciones están en este repositorio.
 
 | Capa | Tecnología |
 |---|---|
@@ -241,7 +248,7 @@ Capturas en [`docs/evidencia`](docs/evidencia), tomadas sobre el código del rel
 
 Una opción gratuita:
 
-- **Base de datos:** PostgreSQL en Render, Neon o Supabase. Copia su URL en `DATABASE_URL` y pon `DATABASE_SSL=true`.
+- **Base de datos:** una instancia de PostgreSQL administrada (por ejemplo, Render PostgreSQL o Railway PostgreSQL). Copia su URL en `DATABASE_URL` y pon `DATABASE_SSL=true`.
 - **Backend (Render → Web Service):** directorio raíz `backend`, build `npm install && npm run db:migrate`, start `npm start`. Configura las variables de entorno en el panel. Luego, una sola vez, ejecuta `npm run create-admin` desde la *Shell* de Render.
 - **Frontend (Vercel):** directorio raíz `frontend`, variable `VITE_API_URL` = URL pública del backend. El archivo `vercel.json` ya hace que las rutas de React funcionen al recargar.
 - Agrega la URL de Vercel a `CORS_ORIGIN` en el backend.
