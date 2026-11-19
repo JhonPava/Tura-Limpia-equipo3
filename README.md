@@ -17,21 +17,20 @@ Universidad del Pacífico · Ingeniería de Sistemas · Seminario de Actualizaci
 | **Frontend público** | _(opcional en la entrega 1)_ |
 | **Backend público** | _(opcional en la entrega 1)_ |
 
-## Integrantes y responsabilidades
+## Integrantes
 
-Cada tarea está a cargo de una pareja. Dentro de la pareja, cada integrante sube su propio bloque desde su cuenta (rama y pull request propios) y revisa el pull request de su compañero.
-
-| Tarea | Integrante | Usuario GitHub | Bloque a cargo | Responsabilidades en la entrega 1 |
-|---|---|---|---|---|
-| **1. Base de datos y administración del repositorio** | _[Nombre]_ | @JhonPava | 1 · Base de datos | Conexión a PostgreSQL, migraciones, datos de prueba y script del administrador inicial. Revisión y merge de PRs, release `semana-1` |
-| **2. Backend: servidor y autenticación** | _[Nombre]_ | _[@usuario]_ | 2 · Servidor | Servidor Express, CORS, manejo de errores y endpoint de salud (`/api/health`) |
-| | _[Nombre]_ | _[@usuario]_ | 3 · Autenticación | Generación y validación del token, sesiones, permisos de administrador |
-| **3. Backend: endpoints y pruebas** | _[Nombre]_ | _[@usuario]_ | 4 · Endpoints | Controladores y rutas de login, logout, perfil y dashboard |
-| | _[Nombre]_ | _[@usuario]_ | 5 · Pruebas | Pruebas automáticas del acceso administrativo |
-| **4. Frontend: base e inicio de sesión** | _[Nombre]_ | _[@usuario]_ | 6 · Frontend base | Proyecto React + Vite, cliente de la API, estilos |
-| | _[Nombre]_ | _[@usuario]_ | 7 · Login | Pantalla de inicio de sesión, mensajes de error y manejo de la sesión |
-| **5. Frontend: dashboard y evidencia** | _[Nombre]_ | _[@usuario]_ | 8 · Dashboard | Dashboard, rutas protegidas, cierre de sesión y accesos a los módulos |
-| | _[Nombre]_ | _[@usuario]_ | 9 · Documentación | README, instrucciones de verificación y capturas del funcionamiento |
+| Integrante | Usuario GitHub |
+|---|---|
+| Wilmer Chamapuro Moya | [@chamapuromoyawilmer-lang](https://github.com/chamapuromoyawilmer-lang) |
+| Johnathan Javier Lozano Patiño | [@jonathan35356](https://github.com/jonathan35356) |
+| Juan Sebastián Salazar Aguirre | _[pendiente]_ |
+| Arley Mauricio Camacho Montoya | [@mauro12351](https://github.com/mauro12351) |
+| Karen Julieth Solis Mosquera | [@KarenSolis3004](https://github.com/KarenSolis3004) |
+| Jeison Enrique Solis Valverde | [@JEIBLEIK3](https://github.com/JEIBLEIK3) |
+| Juan Camilo Angulo Naboyan | _[pendiente]_ |
+| Juan Alejandro Roldan Rodríguez | [@jaroldan19](https://github.com/jaroldan19) |
+| Jhon Fernando Pava Gonzalez | [@JhonPava](https://github.com/JhonPava) |
+| Duvan Andres Delgado Vergara | _[por confirmar]_ |
 
 ## Tecnologías
 
