@@ -29,6 +29,8 @@ Universidad del Pacífico · Ingeniería de Sistemas · Seminario de Actualizaci
 
 ## Tecnologías
 
+Backend propio e independiente con PostgreSQL. No se usan servicios tipo backend-as-a-service (Supabase, Firebase, Atlas): los endpoints, controladores y migraciones están en este repositorio.
+
 | Capa | Tecnología |
 |---|---|
 | Base de datos | PostgreSQL 16 |
@@ -241,7 +243,7 @@ Capturas en [`docs/evidencia`](docs/evidencia), tomadas sobre el código del rel
 
 Una opción gratuita:
 
-- **Base de datos:** PostgreSQL en Render, Neon o Supabase. Copia su URL en `DATABASE_URL` y pon `DATABASE_SSL=true`.
+- **Base de datos:** una instancia de PostgreSQL administrada (por ejemplo, Render PostgreSQL o Railway PostgreSQL). Copia su URL en `DATABASE_URL` y pon `DATABASE_SSL=true`.
 - **Backend (Render → Web Service):** directorio raíz `backend`, build `npm install && npm run db:migrate`, start `npm start`. Configura las variables de entorno en el panel. Luego, una sola vez, ejecuta `npm run create-admin` desde la *Shell* de Render.
 - **Frontend (Vercel):** directorio raíz `frontend`, variable `VITE_API_URL` = URL pública del backend. El archivo `vercel.json` ya hace que las rutas de React funcionen al recargar.
 - Agrega la URL de Vercel a `CORS_ORIGIN` en el backend.

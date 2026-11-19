@@ -8,7 +8,7 @@ export default {
   client: 'pg',
   connection: {
     connectionString: process.env.DATABASE_URL,
-    // Los proveedores en la nube (Render, Neon, Supabase, Railway) exigen SSL.
+    // Los PostgreSQL alojados en la nube (por ejemplo, Render o Railway) exigen SSL.
     ssl: usarSSL ? { rejectUnauthorized: false } : false,
   },
   pool: { min: 0, max: 10 },
