@@ -16,7 +16,6 @@ Universidad del Pacífico · Ingeniería de Sistemas · Seminario de Actualizaci
 | Arley Mauricio Camacho Montoya | [@mauro12351](https://github.com/mauro12351) |
 | Karen Julieth Solis Mosquera | [@KarenSolis3004](https://github.com/KarenSolis3004) |
 | Jeison Enrique Solis Valverde | [@JEIBLEIK3](https://github.com/JEIBLEIK3) |
-| Juan Camilo Angulo Naboyan | _[pendiente]_ |
 | Juan Alejandro Roldan Rodríguez | [@jaroldan19](https://github.com/jaroldan19) |
 | Jhon Fernando Pava Gonzalez | [@JhonPava](https://github.com/JhonPava) |
 | Duvan Andres Delgado Vergara | _[por confirmar]_ |
