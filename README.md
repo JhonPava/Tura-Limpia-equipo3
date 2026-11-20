@@ -8,17 +8,17 @@ Universidad del Pacífico · Ingeniería de Sistemas · Seminario de Actualizaci
 
 ## Integrantes
 
-| Integrante | Usuario GitHub |
-|---|---|
-| Wilmer Chamapuro Moya | [@chamapuromoyawilmer-lang](https://github.com/chamapuromoyawilmer-lang) |
-| Johnathan Javier Lozano Patiño | [@jonathan35356](https://github.com/jonathan35356) |
-| Juan Sebastián Salazar Aguirre | _[pendiente]_ |
-| Arley Mauricio Camacho Montoya | [@mauro12351](https://github.com/mauro12351) |
-| Karen Julieth Solis Mosquera | [@KarenSolis3004](https://github.com/KarenSolis3004) |
-| Jeison Enrique Solis Valverde | [@JEIBLEIK3](https://github.com/JEIBLEIK3) |
-| Juan Alejandro Roldan Rodríguez | [@jaroldan19](https://github.com/jaroldan19) |
-| Jhon Fernando Pava Gonzalez | [@JhonPava](https://github.com/JhonPava) |
-| Duvan Andres Delgado Vergara | _[por confirmar]_ |
+| Integrante | Usuario GitHub | Rol |
+|---|---|---|
+| Wilmer Chamapuro Moya | [@chamapuromoyawilmer-lang](https://github.com/chamapuromoyawilmer-lang) | Documentación |
+| Johnathan Javier Lozano Patiño | [@jonathan35356](https://github.com/jonathan35356) | Backend |
+| Juan Sebastián Salazar Aguirre | _[pendiente]_ | Base de datos |
+| Arley Mauricio Camacho Montoya | [@mauro12351](https://github.com/mauro12351) | Documentación |
+| Karen Julieth Solis Mosquera | [@KarenSolis3004](https://github.com/KarenSolis3004) | Evidencia |
+| Jeison Enrique Solis Valverde | [@JEIBLEIK3](https://github.com/JEIBLEIK3) | Base de datos |
+| Juan Alejandro Roldan Rodríguez | [@jaroldan19](https://github.com/jaroldan19) | Evidencia |
+| Jhon Fernando Pava Gonzalez | [@JhonPava](https://github.com/JhonPava) | Frontend |
+| Duvan Andres Delgado Vergara | _[por confirmar]_ | Frontend |
 
 ## Tecnologías
 
