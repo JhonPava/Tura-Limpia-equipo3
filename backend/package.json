@@ -1,0 +1,23 @@
+{
+  "name": "tura-limpia-backend",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Backend de Tura Limpia: API, migraciones y seeds de PostgreSQL",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "db:migrate": "knex migrate:latest",
+    "db:rollback": "knex migrate:rollback --all",
+    "db:seed": "knex seed:run",
+    "db:reset": "knex migrate:rollback --all && knex migrate:latest && knex seed:run",
+    "db:status": "knex migrate:status",
+    "create-admin": "node scripts/create-admin.js"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "dotenv": "^16.4.5",
+    "knex": "^3.1.0",
+    "pg": "^8.13.1"
+  }
+}
