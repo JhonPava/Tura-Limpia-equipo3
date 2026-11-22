@@ -6,6 +6,19 @@ Universidad del Pacífico · Ingeniería de Sistemas · Seminario de Actualizaci
 
 ---
 
+## Entrega 1 · Acceso administrativo
+
+| | |
+|---|---|
+| **Equipo** | EMPRESA 3 |
+| **Repositorio** | https://github.com/JhonPava/Tura-Limpia-equipo3 |
+| **Release semana-1** | https://github.com/JhonPava/Tura-Limpia-equipo3/releases/tag/semana-1 |
+| **Evidencia de funcionamiento** | [Capturas en `Evidencias/`](#evidencia-de-funcionamiento) |
+| **Instrucciones de verificación** | [Verificar el acceso administrativo](#instrucciones-para-verificar-el-acceso-administrativo) |
+| **Documentación** | [Diagrama entidad-relación (MER)](Documentacion/MER.jpeg) · [Requerimientos funcionales](Documentacion/Tura%20Limpia%20Requerimientos%20Funcionalesy%20documentacion%20.docx) |
+
+---
+
 ## Integrantes
 
 | Integrante | Usuario GitHub | Rol |
@@ -308,7 +321,3 @@ Una opción gratuita:
 - **Backend (Render → Web Service):** directorio raíz `backend`, build `npm install && npm run db:migrate`, start `npm start`. Configura las variables de entorno en el panel. Luego, una sola vez, ejecuta `npm run create-admin` desde la *Shell* de Render.
 - **Frontend (Vercel):** directorio raíz `frontend`, variable `VITE_API_URL` = URL pública del backend. El archivo `vercel.json` ya hace que las rutas de React funcionen al recargar.
 - Agrega la URL de Vercel a `CORS_ORIGIN` en el backend.
-
-## Flujo de trabajo del equipo
-
-Ver [`docs/GUIA-EQUIPO.md`](docs/GUIA-EQUIPO.md): ramas, pull requests y cómo crear el release semanal.
