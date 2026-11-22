@@ -1,45 +1,26 @@
 import { Navigate, Route, Routes } from 'react-router-dom';
-import { useAuth } from './auth/AuthContext.jsx';
+import RutaProtegida from './auth/RutaProtegida.jsx';
+import Panel from './components/Panel.jsx';
 import Login from './pages/Login.jsx';
-import { IconoLogo } from './components/Iconos.jsx';
-
-// Parte 1 del frontend: inicio y cierre de sesión.
-// La parte 2 reemplaza esta pantalla temporal por el dashboard y las rutas protegidas.
-function SesionIniciada() {
-  const { usuario, cargando, cerrarSesion } = useAuth();
-
-  if (cargando) {
-    return (
-      <div className="pantalla-centro">
-        <div className="spinner" aria-label="Cargando" />
-      </div>
-    );
-  }
-  if (!usuario) return <Navigate to="/login" replace />;
-
-  return (
-    <div className="pantalla-centro">
-      <div className="tarjeta-mensaje">
-        <span style={{ color: 'var(--verde)' }}>
-          <IconoLogo size={44} />
-        </span>
-        <h1>Sesión iniciada</h1>
-        <p>
-          Bienvenido, {usuario.nombre}. El dashboard se agrega en la parte 2 del frontend.
-        </p>
-        <button className="boton" onClick={() => cerrarSesion()}>
-          Cerrar sesión
-        </button>
-      </div>
-    </div>
-  );
-}
+import Dashboard from './pages/Dashboard.jsx';
+import ModuloPendiente from './pages/ModuloPendiente.jsx';
 
 export default function App() {
   return (
     <Routes>
       <Route path="/login" element={<Login />} />
-      <Route path="/dashboard" element={<SesionIniciada />} />
+
+      {/* Todo lo que está aquí dentro exige sesión de administrador. */}
+      <Route element={<RutaProtegida />}>
+        <Route element={<Panel />}>
+          <Route path="/dashboard" element={<Dashboard />} />
+          <Route path="/vehiculos" element={<ModuloPendiente clave="vehiculos" nombre="Vehículos" />} />
+          <Route path="/conductores" element={<ModuloPendiente clave="conductores" nombre="Conductores" />} />
+          <Route path="/rutas" element={<ModuloPendiente clave="rutas" nombre="Rutas" />} />
+          <Route path="/programacion" element={<ModuloPendiente clave="programacion" nombre="Programación" />} />
+        </Route>
+      </Route>
+
       <Route path="*" element={<Navigate to="/dashboard" replace />} />
     </Routes>
   );
