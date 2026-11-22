@@ -194,6 +194,31 @@ El frontend también protege las páginas (`RutaProtegida`), pero quien decide d
 | GET | `/api/auth/me` | Autenticado | Datos del usuario de la sesión |
 | GET | `/api/dashboard` | Solo ADMIN | Usuario y módulos del panel |
 
+## Backend implementado para la entrega 1
+
+La API de la entrega 1 está implementada con Express y utiliza PostgreSQL mediante Knex.
+El login consulta `v_usuario_roles`, valida la contraseña con bcrypt y crea una fila en
+`sesiones`. El token JWT contiene el identificador de esa sesión y las rutas protegidas
+verifican su firma, expiración y estado en la base de datos.
+
+- `POST /api/auth/login`: rechaza credenciales incorrectas, cuentas inactivas y usuarios
+  que no tengan el rol `ADMIN`.
+- `POST /api/auth/logout`: marca la sesión como cerrada y invalida el token.
+- `GET /api/auth/me`: devuelve los datos y roles del usuario autenticado.
+- `GET /api/dashboard`: devuelve los módulos de Vehículos, Conductores, Rutas y
+  Programación. Solo puede acceder un usuario autenticado con rol `ADMIN`.
+
+Ejecución local:
+
+```bash
+cd backend
+npm install
+npm run db:migrate
+npm run db:seed
+npm run dev
+npm test
+```
+
 Los errores tienen siempre el mismo formato: `{ "error": { "codigo": "...", "mensaje": "..." } }`.
 
 ## Variables de entorno
