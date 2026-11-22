@@ -35,17 +35,20 @@ Backend propio e independiente con PostgreSQL. No se usan servicios tipo backend
 ## Estructura del repositorio
 
 ```
-tura-limpia/
+Tura-Limpia-equipo3/
 ├── backend/
 │   ├── db/migrations/      # Migraciones: crean la BD desde cero
 │   ├── db/seeds/           # Datos mínimos de prueba
 │   ├── scripts/            # create-admin.js (administrador inicial)
-│   ├── src/                # API: rutas, middleware, servicios
-│   ├── tests/              # Pruebas de los endpoints
+│   ├── src/
+│   │   ├── routes/         # Qué URL atiende cada endpoint
+│   │   ├── controllers/    # Lógica de cada endpoint
+│   │   └── middleware/     # Autenticación, permisos y errores
+│   ├── test/               # Pruebas de los endpoints
 │   └── knexfile.js
 ├── frontend/
 │   └── src/                # React: login, dashboard, rutas protegidas
-├── docs/evidencia/         # Capturas del funcionamiento
+├── Evidencias/             # Capturas del funcionamiento
 └── docker-compose.yml      # PostgreSQL local (opcional)
 ```
 
@@ -247,13 +250,53 @@ Los archivos `.env` **no se suben a GitHub** (están en `.gitignore`). En la nub
 
 ## Evidencia de funcionamiento
 
-Capturas en [`docs/evidencia`](docs/evidencia), tomadas sobre el código del release `semana-1`.
+Capturas del sistema funcionando, guardadas en la carpeta [`Evidencias/`](Evidencias). Corresponden al código del release `semana-1`.
 
-| | |
-|---|---|
-| **1. Login** ![Login](docs/evidencia/01-login.png) | **2. Credenciales incorrectas** ![Error](docs/evidencia/02-credenciales-incorrectas.png) |
-| **3. Usuario sin permisos de administrador** ![Sin permisos](docs/evidencia/03-usuario-sin-permisos.png) | **4. Dashboard del administrador** ![Dashboard](docs/evidencia/04-dashboard.png) |
-| **5. Acceso a un módulo** ![Módulo](docs/evidencia/05-modulo-vehiculos.png) | **6. Sesión cerrada** ![Logout](docs/evidencia/06-sesion-cerrada.png) |
+| # | Qué se ve | Punto de la lista de chequeo que demuestra |
+|---|---|---|
+| 1 | [Inicio de sesión](Evidencias/Evidencia_Login.jpeg) | El administrador puede iniciar sesión. |
+| 2 | [Credenciales incorrectas](Evidencias/Evidencia%200.jpeg) | Las credenciales incorrectas producen un mensaje comprensible. |
+| 3 | [Usuario sin permisos](Evidencias/Evidencia_Usuario_sin_permiso.jpeg) | El sistema valida los permisos de administrador. |
+| 4 | [Dashboard del administrador](Evidencias/Evidencia%201.jpeg) | El administrador autenticado abre el dashboard con los 4 accesos. |
+| 5 | [Acceso a un módulo](Evidencias/Evidencia_modulo_vehiculos.jpeg) | Solo un administrador autenticado entra al panel. |
+| 6 | [Cierre de sesión](Evidencias/Evidencia%202.jpeg) | El administrador puede cerrar sesión. |
+
+### 1. Inicio de sesión
+
+Pantalla de login del administrador.
+
+<img src="Evidencias/Evidencia_Login.jpeg" alt="1. Inicio de sesión" width="420">
+
+### 2. Credenciales incorrectas
+
+Con una contraseña equivocada aparece *"Correo o contraseña incorrectos."*
+
+<img src="Evidencias/Evidencia%200.jpeg" alt="2. Credenciales incorrectas" width="420">
+
+### 3. Usuario sin permisos
+
+El usuario `operador@turalimpia.co` recibe *"Esta cuenta no tiene permisos de administrador."*
+
+<img src="Evidencias/Evidencia_Usuario_sin_permiso.jpeg" alt="3. Usuario sin permisos" width="420">
+
+### 4. Dashboard del administrador
+
+Panel con acceso a Vehículos, Conductores, Rutas y Programación.
+
+<img src="Evidencias/Evidencia%201.jpeg" alt="4. Dashboard del administrador" width="420">
+
+### 5. Acceso a un módulo
+
+Entrada al módulo Vehículos, protegida para administradores con sesión.
+
+<img src="Evidencias/Evidencia_modulo_vehiculos.jpeg" alt="5. Acceso a un módulo" width="420">
+
+### 6. Cierre de sesión
+
+Al cerrar sesión aparece *"Cerraste sesión correctamente."*
+
+<img src="Evidencias/Evidencia%202.jpeg" alt="6. Cierre de sesión" width="420">
+
 
 ---
 
