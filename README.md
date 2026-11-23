@@ -28,7 +28,7 @@ Universidad del Pacífico · Ingeniería de Sistemas · Seminario de Actualizaci
 | Juan Sebastián Salazar Aguirre | [@Sebastian245675](https://github.com/Sebastian245675) | Base de datos |
 | Arley Mauricio Camacho Montoya | [@mauro12351](https://github.com/mauro12351) | Documentación |
 | Karen Julieth Solis Mosquera | [@KarenSolis3004](https://github.com/KarenSolis3004) | Evidencia |
-| Jeison Enrique Solis Valverde | [@JEIBLEIK3](https://github.com/JEIBLEIK3) | Base de datos |
+| Jeison Enrique Solis Valverde | [@JEIBLEIK3](https://github.com/JEIBLEIK3) | Documentación |
 | Juan Alejandro Roldan Rodríguez | [@jaroldan19](https://github.com/jaroldan19) | Evidencia |
 | Jhon Fernando Pava Gonzalez | [@JhonPava](https://github.com/JhonPava) | Frontend |
 | Duvan Andres Delgado Vergara | [@Duvan-Vergara1](https://github.com/Duvan-Vergara1) | Frontend |
