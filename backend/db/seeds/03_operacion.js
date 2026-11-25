@@ -37,6 +37,11 @@ exports.seed = async (knex) => {
     { usuario: 'mangulo', nombres: 'María', apellidos: 'Angulo', rol: 'OPERADOR', cargo: 'Operaria de barrido', barrio: 'Marina' },
     { usuario: 'jvalencia', nombres: 'Jorge', apellidos: 'Valencia', rol: 'OPERADOR', cargo: 'Operario de barrido', barrio: 'Oriente' },
     { usuario: 'ariascos', nombres: 'Ana', apellidos: 'Riascos', rol: 'OPERADOR', cargo: 'Operaria de barrido', barrio: 'Palo Seco' },
+    // Conductores en otros estados, para probar el dashboard (solo cuenta los ACTIVO como activos)
+    { usuario: 'lcaicedo', nombres: 'Luis', apellidos: 'Caicedo', rol: 'CONDUCTOR', cargo: 'Conductor', licencia: 'C3-1100000007',
+      categoria: 'C3', vencimiento: '2027-06-30', estadoConductor: 'SUSPENDIDO', barrio: 'Puertos' },
+    { usuario: 'pobando', nombres: 'Pedro', apellidos: 'Obando', rol: 'CONDUCTOR', cargo: 'Conductor', licencia: 'C2-1100000008',
+      categoria: 'C2', vencimiento: '2026-12-15', estadoConductor: 'INACTIVO', barrio: 'Oriente' },
   ];
 
   const trabajadores = {};
@@ -60,8 +65,9 @@ exports.seed = async (knex) => {
       const [conductor] = await knex('conductor').insert({
         id_trabajador: trabajador.id_trabajador,
         num_licencia: p.licencia,
-        categoria_licencia: 'C2',
-        vencimiento_licencia: '2028-12-31',
+        categoria_licencia: p.categoria ?? 'C2',
+        vencimiento_licencia: p.vencimiento ?? '2028-12-31',
+        estado: p.estadoConductor ?? 'ACTIVO',
       }).returning('id_conductor');
       conductores[p.usuario] = conductor.id_conductor;
     }
@@ -84,6 +90,11 @@ exports.seed = async (knex) => {
     { placa: 'TLP101', num_interno: 'V-01', tipo: 'COMPACTADOR', marca: 'Chevrolet', modelo: 'NPR 2022', capacidad_ton: 8.5, fecha_adquisicion: '2022-03-15', estado_operativo: 'EN_SERVICIO' },
     { placa: 'TLP102', num_interno: 'V-02', tipo: 'COMPACTADOR', marca: 'Hino', modelo: '500 2023', capacidad_ton: 12, fecha_adquisicion: '2023-07-01' },
     { placa: 'TLP103', num_interno: 'V-03', tipo: 'VOLQUETA', marca: 'International', modelo: '4300 2019', capacidad_ton: 10, fecha_adquisicion: '2019-05-20', estado_operativo: 'MANTENIMIENTO' },
+    { placa: 'TLP104', num_interno: 'V-04', tipo: 'COMPACTADOR', marca: 'Chevrolet', modelo: 'FRR 2021', capacidad_ton: 9, fecha_adquisicion: '2021-02-10', estado_operativo: 'FUERA_SERVICIO' },
+    { placa: 'TLP105', num_interno: 'V-05', tipo: 'VOLQUETA', marca: 'Hino', modelo: '300 2024', capacidad_ton: 6, fecha_adquisicion: '2024-01-22' },
+    { placa: 'TLP106', num_interno: 'V-06', tipo: 'MINICARGADOR', marca: 'Bobcat', modelo: 'S450 2020', capacidad_ton: 1.5, fecha_adquisicion: '2020-09-05', estado_operativo: 'MANTENIMIENTO' },
+    // Vehículo desactivado: queda guardado pero no cuenta en el dashboard
+    { placa: 'TLP099', num_interno: 'V-99', tipo: 'VOLQUETA', marca: 'Ford', modelo: 'F-600 2012', capacidad_ton: 7, fecha_adquisicion: '2012-04-18', estado_operativo: 'FUERA_SERVICIO', activo: false },
   ]).returning('id_vehiculo');
 
   // Rutas: macroruta -> microruta -> paradas; programación con días de servicio
