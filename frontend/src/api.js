@@ -9,10 +9,12 @@ export const tokenGuardado = {
 };
 
 export class ErrorApi extends Error {
-  constructor(status, mensaje, codigo) {
+  // detalles: mensajes por campo que manda el backend, por ejemplo { placa: ['La placa es obligatoria.'] }
+  constructor(status, mensaje, codigo, detalles = {}) {
     super(mensaje);
     this.status = status;
     this.codigo = codigo;
+    this.detalles = detalles;
   }
 }
 
@@ -40,10 +42,11 @@ export async function api(ruta, { method = 'GET', body, autenticado = true } = {
   if (!respuesta.ok) {
     const mensaje = datos?.error?.mensaje || 'Ocurrió un error inesperado.';
     const codigo = datos?.error?.codigo;
+    const detalles = datos?.error?.detalles || {};
     if (respuesta.status === 401 && autenticado && token) {
       window.dispatchEvent(new CustomEvent(EVENTO_SESION_INVALIDA, { detail: mensaje }));
     }
-    throw new ErrorApi(respuesta.status, mensaje, codigo);
+    throw new ErrorApi(respuesta.status, mensaje, codigo, detalles);
   }
   return datos;
 }
